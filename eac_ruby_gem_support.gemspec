@@ -13,4 +13,6 @@ Gem::Specification.new do |s|
   s.metadata    = { 'source_code_uri' => 'https://github.com/esquilo-azul/eac_ruby_gem_support' }
 
   s.files = Dir['{lib}/**/*']
+
+  s.add_dependency 'rubocop', '~> 0.80.1'
 end
