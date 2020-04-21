@@ -16,6 +16,6 @@ RSpec.shared_examples 'rubocop_check' do |root_path|
   let(:runner) { ::RuboCop::Runner.new({}, config_store) }
 
   it 'rubocop return ok' do
-    expect(runner.run([])).to eq(true)
+    expect(::Dir.chdir(root_path) { runner.run([]) }).to eq(true)
   end
 end
