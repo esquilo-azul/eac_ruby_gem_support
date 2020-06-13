@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'rubocop'
+require 'rspec'
 
 RSpec.shared_examples 'rubocop_check' do |root_path|
   before do
