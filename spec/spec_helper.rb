@@ -98,3 +98,6 @@ RSpec.configure do |config|
   #   # as the one that triggered the failure.
   #   Kernel.srand config.seed
 end
+
+require 'eac_ruby_gem_support/rspec'
+::EacRubyGemSupport::Rspec.setup(::File.expand_path('..', __dir__))
