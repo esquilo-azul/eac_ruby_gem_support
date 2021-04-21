@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'eac_ruby_gem_support/rspec/helpers/filesystem'
 require 'rspec'
 
 module EacRubyGemSupport
@@ -28,6 +29,13 @@ module EacRubyGemSupport
 
     protected
 
-    def setup; end
+    def setup
+      setup_filesystem_helper
+    end
+
+    def setup_filesystem_helper
+      config.include ::EacRubyGemSupport::Rspec::Helpers::Filesystem
+      config.after(:each) { purge_temp_files }
+    end
   end
 end
