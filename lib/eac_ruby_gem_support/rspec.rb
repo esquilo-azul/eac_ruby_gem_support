@@ -1,10 +1,13 @@
 # frozen_string_literal: true
 
 require 'eac_ruby_gem_support/rspec/helpers/filesystem'
+require 'eac_ruby_gem_support/rspec/specs/rubocop'
 require 'rspec'
 
 module EacRubyGemSupport
   class Rspec
+    include ::EacRubyGemSupport::Rspec::Specs::Rubocop
+
     class << self
       def default
         @default || raise("Default instance was not set. Use #{self.class.name}.setup")
