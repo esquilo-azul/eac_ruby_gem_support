@@ -6,7 +6,7 @@ require 'eac_ruby_gem_support/rspec/specs/rubocop'
 require 'tmpdir'
 
 module EacRubyGemSupport
-  class Rspec
+  module Rspec
     module SetupInclude
       common_concern do
         include ::EacRubyGemSupport::Rspec::Specs::Rubocop

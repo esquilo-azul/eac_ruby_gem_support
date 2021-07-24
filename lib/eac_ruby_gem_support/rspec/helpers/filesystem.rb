@@ -5,7 +5,7 @@ require 'tmpdir'
 require 'tempfile'
 
 module EacRubyGemSupport
-  class Rspec
+  module Rspec
     module Helpers
       module Filesystem
         def purge_temp_files
