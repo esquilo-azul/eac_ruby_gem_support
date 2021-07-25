@@ -13,6 +13,7 @@ module EacRubyGemSupport
 
       class << self
         def setup(setup_obj)
+          setup_load_path(setup_obj)
           setup_filesystem_helper(setup_obj)
         end
 
@@ -21,6 +22,10 @@ module EacRubyGemSupport
         def setup_filesystem_helper(setup_obj)
           setup_obj.rspec_config.include ::EacRubyGemSupport::Rspec::Helpers::Filesystem
           setup_obj.rspec_config.after(:each) { purge_temp_files }
+        end
+
+        def setup_load_path(setup_obj)
+          $LOAD_PATH.push setup_obj.app_root_path.join('lib').to_path
         end
       end
     end
