@@ -11,7 +11,7 @@ module EacRubyGemSupport
       extend ::ActiveSupport::Concern
       include ::EacRubyGemSupport::Rspec::Specs::Rubocop
 
-      def self.perform(setup_obj)
+      def self.extended(setup_obj)
         setup_obj.setup_load_path
         setup_obj.setup_example_persistence
         setup_obj.setup_filesystem_helper
