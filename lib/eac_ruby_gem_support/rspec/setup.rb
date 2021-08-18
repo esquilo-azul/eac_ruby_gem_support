@@ -32,7 +32,16 @@ module EacRubyGemSupport
 
       # @return [Pathname]
       def example_persistence_path
-        ::File.join(::Dir.tmpdir, app_root_path.basename.to_path.variableize).to_pathname
+        root_tmp.join('example_status_persistence')
+      end
+
+      # The root directory for temporary files.
+      # @return [Pathname]
+      def root_tmp
+        r = ::Pathname.new(::Dir.tmpdir)
+                      .join(app_root_path.expand_path.to_path.variableize + '_specs_tmp')
+        r.mkpath unless r.exist?
+        r
       end
     end
   end
