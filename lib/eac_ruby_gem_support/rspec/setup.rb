@@ -2,6 +2,7 @@
 
 require 'eac_ruby_utils/core_ext'
 require 'eac_ruby_gem_support/rspec/helpers/filesystem'
+require 'eac_ruby_gem_support/rspec/helpers/utils'
 require 'eac_ruby_gem_support/rspec/specs/rubocop'
 require 'tmpdir'
 
@@ -19,6 +20,7 @@ module EacRubyGemSupport
 
       def setup_filesystem_helper
         rspec_config.include ::EacRubyGemSupport::Rspec::Helpers::Filesystem
+        rspec_config.include ::EacRubyGemSupport::Rspec::Helpers::Utils
         rspec_config.after(:each) { purge_temp_files }
       end
 
