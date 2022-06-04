@@ -41,7 +41,7 @@ module EacRubyGemSupport
       # @return [Pathname]
       def root_tmp
         r = ::Pathname.new(::Dir.tmpdir)
-                      .join(app_root_path.expand_path.to_path.variableize + '_specs_tmp')
+              .join(app_root_path.expand_path.to_path.variableize + '_specs_tmp')
         r.mkpath unless r.exist?
         r
       end

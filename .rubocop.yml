@@ -14,6 +14,9 @@ Metrics/BlockLength:
 Layout/LineLength:
   Max: 100
 
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented_relative_to_receiver
+
 Style/Documentation:
   Enabled: false
 
