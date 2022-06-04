@@ -6,6 +6,11 @@ AllCops:
   TargetRailsVersion: 5.2
   TargetRubyVersion: 2.7
 
+Metrics/BlockLength:
+  Exclude:
+    - '**/*.gemspec'
+    - 'spec/**/*_spec.rb'
+
 Layout/LineLength:
   Max: 100
 
