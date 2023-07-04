@@ -11,6 +11,9 @@ Metrics/BlockLength:
     - '**/*.gemspec'
     - 'spec/**/*_spec.rb'
 
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
+
 Layout/LineLength:
   Max: 100
 
@@ -54,4 +57,7 @@ Style/HashTransformKeys:
   Enabled: true
 
 Style/HashTransformValues:
+  Enabled: true
+
+Style/SlicingWithRange:
   Enabled: true
