@@ -6,7 +6,7 @@ require 'eac_ruby_gem_support/version'
 
 Gem::Specification.new do |s|
   s.name        = 'eac_ruby_gem_support'
-  s.version     = ::EacRubyGemSupport::VERSION
+  s.version     = EacRubyGemSupport::VERSION
   s.authors     = ['Esquilo Azul Company']
   s.summary     = 'Development support for Ruby\' Gem.'
   s.homepage    = 'https://github.com/esquilo-azul/eac_ruby_gem_support'

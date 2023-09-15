@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-::RSpec.describe ::EacRubyGemSupport::Rspec::Helpers::Filesystem do
+RSpec.describe EacRubyGemSupport::Rspec::Helpers::Filesystem do
   describe '#temp_file' do
     let(:a_temp_file) { temp_file }
 
@@ -14,7 +14,7 @@
   end
 
   describe '#temp_copy' do
-    let(:source_file) { ::Pathname.new(__FILE__) }
+    let(:source_file) { Pathname.new(__FILE__) }
     let(:source_dir) { source_file.parent }
     let(:file_copy) { temp_copy(source_file) }
     let(:dir_copy) { temp_copy(source_dir) }
