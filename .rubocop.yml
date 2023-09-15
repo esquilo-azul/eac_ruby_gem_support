@@ -4,7 +4,7 @@ require:
 
 AllCops:
   NewCops: enable
-  TargetRailsVersion: 5.2
+  TargetRailsVersion: 6.1
   TargetRubyVersion: 2.7
 
 Gemspec/RequireMFA:
