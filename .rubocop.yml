@@ -5,6 +5,8 @@ AllCops:
   NewCops: enable
   TargetRailsVersion: 6.1
   TargetRubyVersion: 2.7
+Gemspec/DevelopmentDependencies:
+  Enabled: false
 Gemspec/RequireMFA:
   Enabled: false
 Metrics/BlockLength:
