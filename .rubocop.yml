@@ -21,6 +21,8 @@ Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented_relative_to_receiver
 Rails/DynamicFindBy:
   Enabled: false
+Rails/Exit:
+  Enabled: false
 Rails/Output:
   Enabled: false
 Rails/SkipsModelValidations:
