@@ -31,6 +31,8 @@ Rails/TimeZone:
   Enabled: false
 RSpec/MultipleMemoizedHelpers:
   Enabled: false
+RSpec/NestedGroups:
+  Enabled: false
 Style/AsciiComments:
   Enabled: false
 Style/Documentation:
