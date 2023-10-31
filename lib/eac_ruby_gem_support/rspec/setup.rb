@@ -32,7 +32,9 @@ module EacRubyGemSupport
         rspec_config.example_status_persistence_file_path = example_persistence_path.to_path
       end
 
-      def setup_shared_examples; end
+      def setup_shared_examples
+        require 'eac_ruby_gem_support/rspec/shared_examples/source_target_fixtures'
+      end
 
       # @return [Pathname]
       def example_persistence_path
