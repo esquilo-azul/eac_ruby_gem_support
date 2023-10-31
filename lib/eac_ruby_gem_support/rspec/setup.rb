@@ -12,7 +12,7 @@ module EacRubyGemSupport
       extend ::ActiveSupport::Concern
       include ::EacRubyGemSupport::Rspec::Specs::Rubocop
 
-      SETUPS = %w[load_path example_persistence filesystem_helper].freeze
+      SETUPS = %w[load_path example_persistence filesystem_helper shared_examples].freeze
 
       def self.extended(setup_obj)
         SETUPS.each { |s| setup_obj.send("setup_#{s}") }
@@ -31,6 +31,8 @@ module EacRubyGemSupport
       def setup_example_persistence
         rspec_config.example_status_persistence_file_path = example_persistence_path.to_path
       end
+
+      def setup_shared_examples; end
 
       # @return [Pathname]
       def example_persistence_path
