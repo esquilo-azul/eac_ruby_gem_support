@@ -23,6 +23,8 @@ Rails/DynamicFindBy:
   Enabled: false
 Rails/Exit:
   Enabled: false
+Rails/FindEach:
+  Enabled: false
 Rails/Output:
   Enabled: false
 Rails/SkipsModelValidations:
