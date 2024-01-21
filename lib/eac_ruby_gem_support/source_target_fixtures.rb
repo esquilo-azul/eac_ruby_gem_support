@@ -14,11 +14,12 @@ module EacRubyGemSupport
       end
     end
 
-    attr_reader :fixtures_directory
+    # @!attribute [r] fixtures_directory
+    #   @return [String]
 
-    def initialize(fixtures_directory)
-      @fixtures_directory = fixtures_directory
-    end
+    # @!method initialize(fixtures_directory)
+    #   @param fixtures_directory [Pathname]
+    common_constructor :fixtures_directory
 
     def source_target_files
       sources_targets_basenames.map do |basename|
