@@ -7,20 +7,14 @@ module EacRubyGemSupport
   module Rspec
     class SourceTargetFixturesController
       enable_simple_cache
-      common_constructor :example, :spec_file
-
-      def default_fixtures_dir
-        ::File.join(
-          ::File.dirname(spec_file),
-          "#{::File.basename(spec_file, '.*')}_files"
-        )
-      end
+      common_constructor :spec_paths_controller
+      delegate :example, to: :spec_paths_controller
 
       def fixtures_dir
         if example.respond_to?(:fixtures_dir)
           example.fixtures_dir
         else
-          default_fixtures_dir
+          spec_paths_controller.fixtures_directory
         end
       end
 

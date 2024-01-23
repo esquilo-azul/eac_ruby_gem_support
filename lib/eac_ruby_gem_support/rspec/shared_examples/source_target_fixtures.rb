@@ -1,12 +1,14 @@
 # frozen_string_literal: true
 
+require 'eac_ruby_gem_support/rspec/shared_examples/spec_paths'
 require 'eac_ruby_gem_support/rspec/source_target_fixtures_controller'
 require 'eac_ruby_gem_support/source_target_fixtures'
 require 'yaml'
 
 RSpec.shared_examples 'source_target_fixtures' do |spec_file| # rubocop:disable Metrics/BlockLength
+  include_examples 'spec_paths', spec_file
   fixtures_controller = EacRubyGemSupport::Rspec::SourceTargetFixturesController
-                          .new(self, spec_file)
+                          .new(spec_paths_controller)
 
   let(:fixtures_controller) { fixtures_controller }
   let(:spec_file) { spec_file }

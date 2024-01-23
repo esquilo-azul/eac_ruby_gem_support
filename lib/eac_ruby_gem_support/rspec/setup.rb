@@ -33,6 +33,7 @@ module EacRubyGemSupport
       end
 
       def setup_shared_examples
+        require 'eac_ruby_gem_support/rspec/shared_examples/spec_paths'
         require 'eac_ruby_gem_support/rspec/shared_examples/source_target_fixtures'
       end
 
