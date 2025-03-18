@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'eac_ruby_utils', '~> 0.124'
   s.add_dependency 'rspec', '~> 3.13'
-  s.add_dependency 'rubocop', '~> 1.60', '>= 1.60.1'
+  s.add_dependency 'rubocop', '~> 1.74'
   s.add_dependency 'rubocop-rails', '~> 2.23', '>= 2.23.1'
   s.add_dependency 'rubocop-rspec', '~> 2.26', '>= 2.26.1'
 end
