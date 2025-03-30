@@ -5,8 +5,6 @@ require 'eac_ruby_utils/core_ext'
 module EacRubyGemSupport
   # Lists pairs of source/target files in a directory.
   class SourceTargetFixtures
-    require_sub __FILE__
-
     class << self
       def source_target_basename(file)
         m = /^(.+)\.(?:source|target)(?:\..+)?$/.match(File.basename(file))
